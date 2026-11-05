@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RUSH MARKET — купить и продать скины CS2</title>
+<meta name="description" content="RUSH MARKET — маркет скинов CS2: покупка с выдачей в Steam, продажа скинов, вход через Steam.">
+<meta name="theme-color" content="#060607">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312101f'/%3E%3Cpath d='M12 44L9 20l12 10 11-16 11 16 12-10-3 24z' fill='%23f3c14f'/%3E%3Crect x='12' y='47' width='40' height='6' rx='3' fill='%23f3c14f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://community.steamstatic.com">
+<link rel="stylesheet" href="css/style.css?v=202611051736">
+</head>
+<body>
+<div class="bg"><i class="glow g1"></i><i class="glow g2"></i><i class="glow g3"></i><i class="grid"></i></div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a href="#/" class="logo" aria-label="RUSH MARKET — на главную">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 44L9 20l12 10 11-16 11 16 12-10-3 24z" fill="url(#lg)"/><rect x="12" y="47" width="40" height="6" rx="3" fill="url(#lg)"/><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9ab"/><stop offset=".5" stop-color="#f3c14f"/><stop offset="1" stop-color="#b37419"/></linearGradient></defs></svg>
+      <span>RUSH<b>MARKET</b></span>
+    </a>
+    <nav class="nav">
+      <a href="#/market" data-nav="market">Маркет</a>
+      <a href="#/sell" data-nav="sell">Продать</a>
+      <a href="#/faq" data-nav="faq">Вопросы</a>
+      <a href="https://rush-case.online/" class="nav-out" target="_blank" rel="noopener">Кейсы RUSH CASE ↗</a>
+    </nav>
+    <div class="me" id="me"></div>
+  </div>
+</header>
+
+<main id="view" class="wrap"></main>
+
+<footer class="foot wrap">
+  <div class="foot-in">
+    <div><b class="gold">RUSH MARKET</b><p>Покупка и продажа скинов CS2. Скины передаются обменом в Steam. Сайт не связан с Valve Corporation.</p></div>
+    <div class="foot-links">
+      <a href="#/terms">Пользовательское соглашение</a>
+      <a href="#/refund">Возвраты</a>
+      <a href="#/faq">Вопросы</a>
+      <a href="#/contacts">Контакты</a>
+    </div>
+    <div class="foot-links">
+      <a href="mailto:rushcasesupport@gmail.com">rushcasesupport@gmail.com</a>
+      <a href="https://t.me/rushcasse" target="_blank" rel="noopener">Telegram</a>
+      <span class="muted">18+</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="tabbar">
+  <a href="#/" data-nav="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Главная</a>
+  <a href="#/market" data-nav="market"><svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 12a2 2 0 0 1-2 1.8h-9a2 2 0 0 1-2-1.8zM8 7a4 4 0 0 1 8 0"/></svg>Маркет</a>
+  <a href="#/sell" data-nav="sell"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>Продать</a>
+  <a href="#/profile" data-nav="profile"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Профиль</a>
+</nav>
+
+<div id="modal" class="modal" hidden></div>
+<div id="toasts" class="toasts"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="data/catalog.js?v=202611051736"></script>
+<script src="js/app.js?v=202611051736"></script>
+</body>
+</html>
