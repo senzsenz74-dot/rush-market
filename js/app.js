@@ -115,7 +115,7 @@ function openDeposit() {
     <label class="muted">Сумма, ₽ (от ${ST.minDep})</label>
     <input id="depAmt" class="inp" type="number" inputmode="numeric" min="${ST.minDep}" value="1000">
     <div class="amts">${a.map(x => `<button class="chip" onclick="$('#depAmt').value=${x}">${x.toLocaleString('ru-RU')} ₽</button>`).join('')}</div>
-    <div class="row2"><button class="btn btn-gold" onclick="payStart('sbp',this)">СБП</button><button class="btn btn-glass" onclick="payStart('card',this)">Карта</button></div>`);
+    ${ST.provider === 'fk' ? `<button class="btn btn-gold" style="width:100%" onclick="payStart('sbp',this)">Перейти к оплате</button><p class="note">Способ оплаты выберете на странице FreeKassa.</p>` : `<div class="row2"><button class="btn btn-gold" onclick="payStart('sbp',this)">СБП</button><button class="btn btn-glass" onclick="payStart('card',this)">Карта</button></div>`}`);
 }
 async function payStart(method, btn) {
   const amount = Math.round(+$('#depAmt').value);
@@ -452,6 +452,7 @@ function pageRefund(v) {
   if (tok) { const { error } = await sb.auth.verifyOtp({ token_hash: tok, type: 'magiclink' }); if (error) toast('Не удалось войти через Steam: ' + error.message, true); else toast('Вы вошли через Steam'); }
   if (err) toast(err === 'cancel' ? 'Вход через Steam отменён' : 'Не удалось войти через Steam', true);
   if (qs.get('pay') === 'ok') toast('Оплата прошла — деньги появятся на балансе после подтверждения кассой');
+  if (qs.get('pay') === 'fail') toast('Оплата не прошла, деньги не списаны. Попробуйте ещё раз.', true);
   indexPrices(); route();
   const st = api('status').then(s => { ST = { ...ST, ...s }; }).catch(() => { /* функция ещё не выложена — всё «скоро» */ });
   await Promise.all([loadPrices(), loadMe(), st]);
