@@ -1,4 +1,4 @@
-https://pay.rush-case.online/fk.php https://gkeexoyrxnsarosymdyp.supabase.co/functions/v1/payment?action=fk_hook 200!
+/fkc.php https://gkeexoyrxnsarosymdyp.supabase.co/functions/v1/payment?action=fk_hook 200!
 https://pay.rush-case.online/* https://rush-case.online/:splat 302!
 /fk.php https://gkeexoyrxnsarosymdyp.supabase.co/functions/v1/rush-market?action=fk_hook 200!
 /* https://rush-case.site/:splat 302!
